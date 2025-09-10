@@ -8,7 +8,8 @@ def search_with_loop_limit(sorted_lst,n):
         mid=(left+right)//2
         if sorted_lst[mid]==n:
             return (True,loops)
-        elif sorted_lst[mid]<n:
+        loops+=1
+        if sorted_lst[mid]<n:
             left=mid+1
         else:
             right=mid-1
